@@ -41,7 +41,7 @@ const fetchOtterData = async () => {
       )
       .then((response) => response.data)
       .then((data) => {
-        if (!data.results.length) {
+        if (!data.results || !data.results.length) {
           isFetching = false
           console.log('reached the end')
           return
